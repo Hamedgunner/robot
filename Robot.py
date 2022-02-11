@@ -207,7 +207,7 @@ while True:
 						
 					elif data["type"]=="JoinedGroupByLink":
 						user = bot.getUserInfo(data['performer_object']['object_guid'])["data"]["user"]["first_name"]
-						bot.sendMessage(target, f"سلام کاربر {user} به گروه گروه Chit Chat خوش اومدی \n لطفا قوانین رو رعایت کن.", message_id=msg["message_id"])
+						bot.sendMessage(target, f" کاربر {user} به گروه گروه Chit Chat خوش اومدی \n لطفا قوانین رو رعایت کن.", message_id=msg["message_id"])
 						# bot.deleteMessages(target, [msg["message_id"]])
 				else:
 					if "forwarded_from" in msg.keys() and bot.getMessagesInfo(target, [msg.get("message_id")])[0]["forwarded_from"]["type_from"] == "Channel" and not msg.get("author_object_guid") in admins :
