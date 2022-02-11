@@ -3,7 +3,7 @@ from rubika import Bot
 import time
 
 bot = Bot("bbsjcknmjfkedlrqumjcoyseqaoqdavd")
-target = "g0BQeQu0374f76345d6041bdb63a02b2"
+target = "g0B4iVr02712405f6afb14c2a6abf647"
 
 def hasAds(msg):
 	links = ["http://","https://",".ir",".com",".org",".net",".me"]
@@ -207,7 +207,7 @@ while True:
 						
 					elif data["type"]=="JoinedGroupByLink":
 						user = bot.getUserInfo(data['performer_object']['object_guid'])["data"]["user"]["first_name"]
-						bot.sendMessage(target, f" کاربر {user} به گروه گروه Chit Chat خوش اومدی \n لطفا قوانین رو رعایت کن.", message_id=msg["message_id"])
+						bot.sendMessage(target, f" کاربر {user} به گروه Chit Chat خوش اومدی \n لطفا قوانین رو رعایت کن.", message_id=msg["message_id"])
 						# bot.deleteMessages(target, [msg["message_id"]])
 				else:
 					if "forwarded_from" in msg.keys() and bot.getMessagesInfo(target, [msg.get("message_id")])[0]["forwarded_from"]["type_from"] == "Channel" and not msg.get("author_object_guid") in admins :
