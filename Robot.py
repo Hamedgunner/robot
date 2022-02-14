@@ -3,7 +3,7 @@ from rubika import Bot
 import time
 
 bot = Bot("bbsjcknmjfkedlrqumjcoyseqaoqdavd")
-target = "g0B4iVr02712405f6afb14c2a6abf647"
+target = "g09ZBX07aadd1e1ac73551905a824ed6"
 
 def hasAds(msg):
 	links = ["http://","https://",".ir",".com",".org",".net",".me"]
